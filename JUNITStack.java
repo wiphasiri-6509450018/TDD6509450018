@@ -5,7 +5,15 @@ import java.util.EmptyStackException;
 import junit.framework.TestCase;
 
 public class JUNITStack extends TestCase {
-
+	
+	public void testCreatenewempthyStack(){
+		Stack s1 = new Stack();
+		int size = s1.getsize();
+		
+		assertEquals(0, s1.getsize());
+		assertTrue(s1.isEmpty());
+		}
+	
     public void testPushObjectElement() {
         Stack s1 = new Stack();
         s1.push(1);
@@ -14,7 +22,7 @@ public class JUNITStack extends TestCase {
         assertFalse(s1.isEmpty());
         assertFalse(s1.isFull());
     }
-
+    
     public void testPopObjectElement() {
         Stack s1 = new Stack();
         s1.push(1);
@@ -25,7 +33,7 @@ public class JUNITStack extends TestCase {
         assertFalse(s1.isFull());
     }
 
-   /* public void testPopEmptyStack() {
+    /*public void testPopEmptyStack() {
         Stack s1 = new Stack();
 
         try {
